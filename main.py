@@ -16,7 +16,7 @@ modelos_selecionados = st.sidebar.multiselect("Modelo Viatura", df["Modelo Viatu
 
 df_filtrado = df[(df["Ano"] == ano_selecionado) & (df["Modelo Viatura"].isin(modelos_selecionados))]
 
-fig1 = px.bar(df_filtrado, x="Modelo Viatura", y=["PO", "EO"], barmode="group", title=f"Comparação entre PO e EO para o ano - [UTILIZE A BARRA LATERAL] {ano_selecionado}")
+fig1 = px.bar(df_filtrado, x="Modelo Viatura", y=["PO", "EO"], barmode="group", title=f"Comparação PO e EO anual - [UTILIZE A BARRA LATERAL] {ano_selecionado}")
 
 # Gráfico sem filtro
 fig2 = px.bar(df, x="Ano", y=["PO", "EO"], color_discrete_map={'PO':'blue', 'EO':'red'},
